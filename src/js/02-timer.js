@@ -3,14 +3,14 @@ import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from "notiflix";
 
 const inputEl = document.querySelector('#datetime-picker');
-const btnEl = document.querySelector('button[data-start]');
+const btnStart = document.querySelector('button[data-start]');
 const timerDiv = document.querySelector('.timer');
 const daysEl = document.querySelector('span[data-days]');
 const hoursEl = document.querySelector('span[data-hours]');
 const minEl = document.querySelector('span[data-minutes]');
 const secEl = document.querySelector('span[data-seconds]');
 
-btnEl.classList.add('disabled');
+btnStart.classList.add('disabled');
 let userDate = null;
 
 
@@ -51,8 +51,8 @@ const options = {
             Notify.failure('Please choose a date in the future');
             userDate = new Date();
         } else { 
-            btnEl.disabled = false;
-            btnEl.classList.remove('disabled');
+            btnStart.disabled = false;
+            btnStart.classList.remove('disabled');
             userDate = selectedDates[0];
         }
     },
@@ -64,7 +64,7 @@ class Timer  {
     constructor() {
         this.isActive = false;
         this.timerId = null;
-        btnEl.disabled = true;
+        btnStart.disabled = true;
     }
     timerStart() {
         if (this.isActive) {
@@ -94,4 +94,4 @@ class Timer  {
 
     const timer = new Timer();
     flatpickr(inputEl, options);
-    btnEl.addEventListener('click', () => timer.timerStart());
+    btnStart.addEventListener('click', () => timer.timerStart());
