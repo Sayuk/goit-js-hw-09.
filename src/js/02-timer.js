@@ -2,7 +2,7 @@ import flatpickr from "flatpickr";
 import 'flatpickr/dist/flatpickr.min.css';
 import notiflix from "notiflix";
 
-const inputEl = document.querySelector('#datetime-picker');
+const input = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('button[data-start]');
 const timerDiv = document.querySelector('.timer');
 const daysEl = document.querySelector('span[data-days]');
@@ -93,5 +93,5 @@ class Timer  {
 }
 
     const timer = new Timer();
-    flatpickr(inputEl, options);
+    flatpickr(input, options);
     btnStart.addEventListener('click', () => timer.timerStart());
