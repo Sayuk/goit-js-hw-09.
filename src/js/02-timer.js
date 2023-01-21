@@ -85,7 +85,7 @@ class Timer  {
 
     }
     timerStop() {
-         if (deltaTime <= 0) {
+         if (components <= 0) {
                     clearInterval(timerId);
                     window.alert("Time is over!");
                 } 
