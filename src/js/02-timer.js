@@ -81,7 +81,7 @@ class Timer  {
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
                if (deltaTime <= 1000) {
-                    this.stop();
+                   return clearInterval(userDate);
                     window.alert('Time is over!');
                 } 
     }, 1000)
