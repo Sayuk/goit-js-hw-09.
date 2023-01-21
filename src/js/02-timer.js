@@ -65,6 +65,7 @@ class Timer  {
         this.isActive = false;
         this.timerId = null;
         btnStart.disabled = true;
+        timerStop(deltaTime);
     }
     timerStart() {
         if (this.isActive) {
@@ -87,12 +88,15 @@ class Timer  {
     }, 1000)
 
     }
-     timerStop(params) {
-          if (params <= 1000) {
+    timerStop(params) {
+        if (params <= 1000) {
         window.alert('Timer STOP')
         return clearInterval(id)
     }
+        
     }
+
+    
 }
 
     const timer = new Timer();
