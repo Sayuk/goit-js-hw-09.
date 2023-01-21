@@ -87,10 +87,10 @@ class Timer  {
     }, 1000)
 
     }
-    timerStop() {
-         clearInterval(this.timerId);
+    // timerStop() {
+    //      clearInterval(this.timerId);
         
-    }
+    // }
 }
 
     const timer = new Timer();
