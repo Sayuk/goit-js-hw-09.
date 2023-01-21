@@ -91,7 +91,7 @@ class Timer  {
     timerStop(params) {
         if (params <= 1000) {
         window.alert('Timer STOP')
-        return clearInterval(id)
+        return clearInterval(userDate)
     }
         
     }
