@@ -81,14 +81,14 @@ class Timer  {
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
                if (components <= 0) {
-                    clearInterval(timerId);
-                    window.alert("Time is over!");
+                    this.stop();
+                    timerDiv.innerHTML = "Time is over!";
                 } 
     }, 1000)
 
     }
     timerStop() {
-         
+         clearInterval(this.timerId);
         
     }
 }
