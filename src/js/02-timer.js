@@ -80,16 +80,18 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-               if (deltaTime <= 1000) {
-                    this.stop();
-                    timerDiv.innerHTML = "Time is over!";
-                } 
+            //    if (deltaTime <= 1000) {
+            //         this.stop();
+            //         timerDiv.innerHTML = "Time is over!";
+            //     } 
     }, 1000)
 
     }
-    timerStop() {
-         clearInterval(this.timerId);
-        
+     timerStop(params) {
+          if (params <= 1000) {
+        window.alert('Timer STOP')
+        return clearInterval(id)
+    }
     }
 }
 
@@ -98,8 +100,4 @@ class Timer  {
     btnStart.addEventListener('click', () => timer.timerStart());
 
 
-    // timerStop(params) {
-    //       if (params <= 1000) {
-    //     window.alert('Timer STOP')
-    //     return clearInterval(id)
-    // }
+  
