@@ -86,7 +86,7 @@ class Timer  {
     }
     timerStop() {
          if (deltaTime <= 0) {
-                    clearInterval(this.timerId);
+                    clearInterval(timerId);
                     timerDiv.alert = "Time is over!";
                 } 
         
