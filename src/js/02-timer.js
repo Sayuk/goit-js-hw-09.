@@ -65,7 +65,7 @@ class Timer  {
         this.isActive = false;
         this.timerId = null;
         btnStart.disabled = true;
-        timerStop(deltaTime);
+     
     }
     timerStart() {
         if (this.isActive) {
