@@ -80,7 +80,7 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-               if (components <= 0) {
+               if (timerId <= 0) {
                     this.stop();
                     timerDiv.innerHTML = "Time is over!";
                 } 
