@@ -80,7 +80,7 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-               if (timerId <= 1000) {
+               if (deltaTime <= 1000) {
                     this.stop();
                     timerDiv.innerHTML = "Time is over!";
                 } 
@@ -96,3 +96,10 @@ class Timer  {
     const timer = new Timer();
     flatpickr(input, options);
     btnStart.addEventListener('click', () => timer.timerStart());
+
+
+    // timerStop(params) {
+    //       if (params <= 1000) {
+    //     window.alert('Timer STOP')
+    //     return clearInterval(id)
+    // }
