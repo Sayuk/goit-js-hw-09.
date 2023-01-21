@@ -65,7 +65,6 @@ class Timer  {
         this.isActive = false;
         this.timerId = null;
         btnStart.disabled = true;
-     
     }
     timerStart() {
         if (this.isActive) {
@@ -81,27 +80,19 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-            //    if (deltaTime <= 1000) {
-            //         this.stop();
-            //         timerDiv.innerHTML = "Time is over!";
-            //     } 
+               if (deltaTime <= 1000) {
+                    this.stop();
+                    window.alert('Time is over!');
+                } 
     }, 1000)
 
     }
-    timerStop(params) {
-        if (params <= 1000) {
-        window.alert('Timer STOP')
-        return clearInterval(userDate)
-    }
+    timerStop() {
+         clearInterval(this.timerId);
         
     }
-
-    
 }
 
     const timer = new Timer();
     flatpickr(input, options);
     btnStart.addEventListener('click', () => timer.timerStart());
-
-
-  
