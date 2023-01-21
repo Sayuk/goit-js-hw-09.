@@ -80,8 +80,8 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-                if (deltaTime <= 0) {
-                    this.stop();
+                if (deltaTime <= currentTime) {
+                    currentTime = 0;
                     timerDiv.innerHTML = "Time is over!";
                 } 
     }, 1000)

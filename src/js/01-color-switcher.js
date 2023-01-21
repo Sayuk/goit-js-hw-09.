@@ -6,10 +6,16 @@ function getRandomHexColor() {
 }
 
 let changeFon = [];
+startFon.disabled = false;
+stopFon.disabled = true;
+     
+
 
 startFon.addEventListener('click', () => {
     changeFon = setInterval(() => {
     document.body.style.background = getRandomHexColor();
+
+    
     }, 1000);
     startFon.disabled = true;
      stopFon.disabled = false;
