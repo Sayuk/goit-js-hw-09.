@@ -80,17 +80,16 @@ class Timer  {
                 minEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
-               if (deltaTime <= 1000) {
-                   return clearInterval(userDate);
-                    window.alert('Time is over!');
-                } 
+              if (deltaTime <= 0) {
+                    clearInterval(userDate);
+    }
     }, 1000)
 
     }
-    // timerStop() {
-    //      clearInterval(this.timerId);
+    timerStop() {
+         clearInterval(this.timerId);
         
-    // }
+    }
 }
 
     const timer = new Timer();
