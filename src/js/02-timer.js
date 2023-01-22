@@ -81,7 +81,8 @@ class Timer  {
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
               if (deltaTime < 1000) {
-                    clearInterval(this.timerId);
+                  clearInterval(this.timerId);
+                  window.alert('таймер всьо');
     }
     }, 1000)
 
